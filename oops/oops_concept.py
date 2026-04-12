@@ -14,7 +14,7 @@ class Phone:
 
     # Class functions
     def PowerOn(self):
-        print("BootUp Your Phone")
+        print(f"BootUp Your Phone my {self.model_name}")
 
     def PowerOff(self):
         print("Switching off your phone")
@@ -32,3 +32,6 @@ class Phone:
 
     
 phone_1 = Phone()
+
+phone_1.model_name = "Oppo"
+print(phone_1.PowerOn())

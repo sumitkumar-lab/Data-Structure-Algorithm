@@ -51,14 +51,14 @@ class LinkedList:
         print("None")
 
 
-# ll = LinkedList()
+ll = LinkedList()
 
-# ll.push_back(7)
-# ll.push_back(8)
-# ll.push_back(9)
+ll.push_back(7)
+ll.push_back(8)
+ll.push_back(9)
 
-# ll.push_front(5)
-# ll.push_front(4)
-# ll.push_front(3)
+ll.push_front(5)
+ll.push_front(4)
+ll.push_front(3)
 
-# print(ll.printll())
+print(ll.printll())
