@@ -109,23 +109,24 @@ print("=========Test==========")
 def make_counter():
     count = 0
     def increment():
+        nonlocal count
         count += 1  # ❌ what happens here?
         return count
     return increment
 
 counter = make_counter()
-print(counter())
+count = counter()
+print(count)
 
 
-"""
-Retry logic
-"""
-import time, random
-def retry_with_backoff(func, retries=3, base_delay=1):
-   for attempt in range(retries):
-       try:
-           return func()
-       except Timeout:
-           delay = base_delay * (2 ** attempt) + random.uniform(0.1, 0.3)
-           print(f"Retrying in {delay:.2f}s...")
-           time.sleep(delay)
+def make_token_counter(max_tokens):
+    used = 0
+    def count(tokens):
+        nonlocal used
+        used += len(tokens)
+        remaining = max_tokens - used
+        return remaining
+    return count
+
+counter = make_token_counter(4096)
+print(counter(["hello", "world"]))

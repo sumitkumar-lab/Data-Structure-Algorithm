@@ -60,11 +60,13 @@ Given a text string:
 4. Trim to last 10 tokens (simulate context window)
 5. Remove all occurrences of stopwords: ["the", "a", "is", "in", "it"]
 """
+print("========== mini project ==========")
 text = "the cat sat in the mat and the cat is happy and it is a good day"
 
 
 # 1. Split it into tokens (words)
 tokens = text.split(" ")
+print(tokens)
 # 2. Count total tokens
 print(len(tokens))
 # 3. Show top 3 most frequent tokens

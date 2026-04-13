@@ -6,6 +6,8 @@ print(a)   # What prints? WHY?
 print(id(a))
 print(id(b))
 print(a is b)
+
+
 b = [10,20,30]
 print(id(a))
 print(id(b))
@@ -18,6 +20,7 @@ print(d)
 
 d[0]=5
 print(d)
+print(c)
 
 
 c = [[1, 2], [3, 4]]
