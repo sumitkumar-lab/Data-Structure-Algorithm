@@ -62,11 +62,12 @@ Given a text string:
 """
 print("========== mini project ==========")
 text = "the cat sat in the mat and the cat is happy and it is a good day"
-
+print(text)
 
 # 1. Split it into tokens (words)
 tokens = text.split(" ")
 print(tokens)
+print(type(tokens))
 # 2. Count total tokens
 print(len(tokens))
 # 3. Show top 3 most frequent tokens
@@ -84,5 +85,4 @@ stopwords = ["the", "a", "is", "in", "it"]
 
 filter = " ".join([word for word in text.split() if word not in stopwords])
 print(filter)
-
 

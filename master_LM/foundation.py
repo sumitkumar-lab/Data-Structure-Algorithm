@@ -22,11 +22,12 @@ d[0]=5
 print(d)
 print(c)
 
-
+print("======= Sliced pick ========")
 c = [[1, 2], [3, 4]]
 d = c[:]
 d[0].append(99)
 print(c)
+print(d)
 """
 c[:] copied the outer list — made new sticky notes. 
 But those new sticky notes still point to the same inner lists. So modifying d[0] still affects c[0]
