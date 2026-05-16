@@ -4,6 +4,8 @@ import os
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 def get_weather(city: str):
+    if not OPENWEATHER_API_KEY:
+        raise ValueError("OPENWEATHER_API_KEY environment variable is required")
 
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHER_API_KEY}&units=metric"
 
